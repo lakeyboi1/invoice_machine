@@ -6,7 +6,9 @@
 
 ### Tech stack
 
-- React native 
+- React Native
+- Node
+- Tailwind CSS
 
 ### Requirement
 
