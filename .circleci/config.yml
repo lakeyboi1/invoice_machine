@@ -1,0 +1,27 @@
+#CircleCI configuration file
+
+version: 2.1
+
+jobs:
+  
+  say_hello:
+    docker:
+        #Primary container image where all steps run
+    - image: cimg/base:stable
+    steps:
+      - checkout
+      - run: echo "Say hello to YAML"
+  
+  say_goodbye:
+    docker:
+        #Primary container image where all steps run
+    - image: cimg/base:stable
+    steps:
+      - checkout
+      - run: echo "Say goodbye to YAML"
+
+workflows:
+  hello_and_goodbye:
+    jobs:
+      - say_hello
+      - say_goodbye
